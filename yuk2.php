@@ -11,7 +11,7 @@ echo color("blue"," Time    : ".date('[d-m-Y] [H:i:s]')."	\n");
 echo color("nevy"," ===================================\n");
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
-        echo color("white"," NOMOR  : ");
+        echo color("yellow"," NOMOR  : ");
         // $no = trim(fgets(STDIN));
         $nohp = trim(fgets(STDIN));
         $nohp = str_replace("62","62",$nohp);
@@ -38,20 +38,20 @@ echo color("nevy"," ===================================\n");
         $register = request("/v5/customers", null, $data);
         if(strpos($register, '"otp_token"')){
         $otptoken = getStr('"otp_token":"','"',$register);
-        echo color("white"," KODE OTP..")."\n";
+        echo color("pink"," KODE OTP..")."\n";
         otp:
-        echo color("white"," Otp : ");
+        echo color("blue"," Otp : ");
         $otp = trim(fgets(STDIN));
         $data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"83415d06-ec4e-11e6-a41b-6c40088ab51e"}';
         $verif = request("/v5/customers/phone/verify", null, $data1);
         if(strpos($verif, '"access_token"')){
-        echo color("white","BERHASIL MENDAFTAR\n");
+        echo color("green","  BERHASIL MENDAFTAR\n");
         $token = getStr('"access_token":"','"',$verif);
         $uuid = getStr('"resource_owner_id":',',',$verif);
-        echo color("white","+] Your access token : ".$token."\n\n");
+        echo color("nevy","+] Your access token : ".$token."\n\n");
         save("token.txt",$token); 
-        echo color("white","\n▬▬▬▬▬▬▬▬▬▬▬▬CLAIM VOUCHER▬▬▬▬▬▬▬▬▬▬▬▬");
-        echo "\n".color("white","CLAIM A..");
+        echo color("green","\n▬▬▬▬▬▬▬▬▬▬▬▬CLAIM VOUCHER▬▬▬▬▬▬▬▬▬▬▬▬");
+        echo "\n".color("yellow","CLAIM A..");
         echo "\n".color("white"," Please wait");
         for($a=1;$a<=3;$a++){
         echo color("white",".");
@@ -65,7 +65,7 @@ echo color("nevy"," ===================================\n");
         }else{
         echo "\n".color("white"," Message: ".$message);
 	gocar:
-        echo "\n".color("white","CLAIM B.. ");
+        echo "\n".color("pink","CLAIM B.. ");
         echo "\n".color("white"," Please wait");
         for($a=1;$a<=3;$a++){
         echo color("white",".");
@@ -79,7 +79,7 @@ echo color("nevy"," ===================================\n");
         }else{
         echo "\n".color("white"," Message: ".$message);
         gofood:
-        echo "\n".color("white","CLAIM C..");
+        echo "\n".color("nevy","CLAIM C..");
         echo "\n".color("white"," Please wait");
         for($a=1;$a<=3;$a++){
         echo color("white",".");
@@ -104,20 +104,20 @@ echo color("nevy"," ===================================\n");
         $voucher11 = getStr1('"title":"','",',$cekvoucher,"11");
         $voucher12 = getStr1('"title":"','",',$cekvoucher,"12");
         $voucher13 = getStr1('"title":"','",',$cekvoucher,"13");
-        echo "\n".color("white"," Total voucher ".$total." : ");
-        echo "\n".color("white"," 1. ".$voucher1);
-        echo "\n".color("white"," 2. ".$voucher2);
-        echo "\n".color("white"," 3. ".$voucher3);
-        echo "\n".color("white"," 4. ".$voucher4);
-        echo "\n".color("white"," 5. ".$voucher5);
-        echo "\n".color("white"," 6. ".$voucher6);
-        echo "\n".color("white"," 7. ".$voucher7);
-        echo "\n".color("white"," 8. ".$voucher8);
-        echo "\n".color("white"," 9. ".$voucher9);
-        echo "\n".color("white"," 10. ".$voucher10);
-	echo "\n".color("white"," 11. ".$voucher11);
-        echo "\n".color("white"," 12. ".$voucher12);
-        echo "\n".color("white"," 13. ".$voucher13);
+        echo "\n".color("red"," Total vouchers ".$total." : ");
+        echo "\n".color("nevy"," 1. ".$voucher1);
+        echo "\n".color("nevy"," 2. ".$voucher2);
+        echo "\n".color("nevy"," 3. ".$voucher3);
+        echo "\n".color("nevy"," 4. ".$voucher4);
+        echo "\n".color("nevy"," 5. ".$voucher5);
+        echo "\n".color("nevy"," 6. ".$voucher6);
+        echo "\n".color("nevy"," 7. ".$voucher7);
+        echo "\n".color("nevy"," 8. ".$voucher8);
+        echo "\n".color("nevy"," 9. ".$voucher9);
+        echo "\n".color("nevy"," 10. ".$voucher10);
+	echo "\n".color("nevy"," 11. ".$voucher11);
+        echo "\n".color("nevy"," 12. ".$voucher12);
+        echo "\n".color("nevy"," 13. ".$voucher13);
         echo"\n";
         $expired1 = getStr1('"expiry_date":"','"',$cekvoucher,'1');
         $expired2 = getStr1('"expiry_date":"','"',$cekvoucher,'2');
@@ -177,15 +177,15 @@ echo color("nevy"," ===================================\n");
          }
          }
          }else{
-         echo color("white","-] OTP SALAH");
+         echo color("red","-] OTP SALAH");
          echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
-         echo color("white","!] INPUT ULANG..\n");
+         echo color("red","!] INPUT ULANG..\n");
          goto otp;
          }
          }else{
-         echo color("white","-] NOMOR SALAH");
+         echo color("red","-] NOMOR SALAH");
          echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
-         echo color("white","!] MASUKAN LAGI\n");
+         echo color("red","!] MASUKAN LAGI\n");
          goto ulang;
          }
 //  }
