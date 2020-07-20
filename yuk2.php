@@ -51,11 +51,11 @@ echo color("nevy"," ===================================\n");
         echo color("nevy"," +]Your access token : ".$token."\n\n");
         save("token.txt",$token); 
         echo color("green","\n▬▬▬▬▬▬▬▬▬▬▬▬CLAIM VOUCHER▬▬▬▬▬▬▬▬▬▬▬▬");
-        echo "\n".color("yellow","CLAIM A..");
-        echo "\n".color("blue"," Please wait");
+        echo "\n".color("yellow","FOOD A..");
+        echo "\n".color("nevy"," Please wait");
         for($a=1;$a<=3;$a++){
         echo color("white",".");
-        sleep(25);
+        sleep(15);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2107"}');
         $message = fetch_value($code1,'"message":"','"');
@@ -65,8 +65,8 @@ echo color("nevy"," ===================================\n");
         }else{
         echo "\n".color("white"," Message: ".$message);
 	gocar:
-        echo "\n".color("yellow","CLAIM B.. ");
-        echo "\n".color("blue"," Please wait");
+        echo "\n".color("yellow","FOOD B.. ");
+        echo "\n".color("nevy"," Please wait");
         for($a=1;$a<=3;$a++){
         echo color("white",".");
         sleep(5);
@@ -79,8 +79,8 @@ echo color("nevy"," ===================================\n");
         }else{
         echo "\n".color("white"," Message: ".$message);
         gofood:
-        echo "\n".color("yellow","CLAIM C..");
-        echo "\n".color("blue"," Please wait");
+        echo "\n".color("yellow","FOOD C..");
+        echo "\n".color("nevy"," Please wait");
         for($a=1;$a<=3;$a++){
         echo color("white",".");
         sleep(5);
@@ -158,7 +158,7 @@ echo color("nevy"," ===================================\n");
                                         $debug['text'] = $pesan;
                                         $debug['respon'] = json_decode($datas, true);
          setpin:
-         echo "\n".color("red","SETPIN..!!!: y/n ");
+         echo "\n".color("red","SET PIN (Y/N) : ");
          $pilih1 = trim(fgets(STDIN));
          if($pilih1 == "y" || $pilih1 == "Y"){
          //if($pilih1 == "y" && strpos($no, "628")){
