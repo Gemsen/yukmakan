@@ -38,24 +38,24 @@ echo color("nevy"," ===================================\n");
         $register = request("/v5/customers", null, $data);
         if(strpos($register, '"otp_token"')){
         $otptoken = getStr('"otp_token":"','"',$register);
-        echo color("pink"," KODE OTP..")."\n";
+        echo color("red"," KODE OTP..")."\n";
         otp:
-        echo color("blue"," Otp : ");
+        echo color("blue"," Otp    : ");
         $otp = trim(fgets(STDIN));
         $data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"83415d06-ec4e-11e6-a41b-6c40088ab51e"}';
         $verif = request("/v5/customers/phone/verify", null, $data1);
         if(strpos($verif, '"access_token"')){
-        echo color("green","  BERHASIL MENDAFTAR\n");
+        echo color("green"," BERHASIL MENDAFTAR\n");
         $token = getStr('"access_token":"','"',$verif);
         $uuid = getStr('"resource_owner_id":',',',$verif);
-        echo color("nevy","+] Your access token : ".$token."\n\n");
+        echo color("nevy"," +]Your access token : ".$token."\n\n");
         save("token.txt",$token); 
         echo color("green","\n▬▬▬▬▬▬▬▬▬▬▬▬CLAIM VOUCHER▬▬▬▬▬▬▬▬▬▬▬▬");
         echo "\n".color("yellow","CLAIM A..");
-        echo "\n".color("white"," Please wait");
+        echo "\n".color("blue"," Please wait");
         for($a=1;$a<=3;$a++){
         echo color("white",".");
-        sleep(35);
+        sleep(25);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2107"}');
         $message = fetch_value($code1,'"message":"','"');
@@ -65,8 +65,8 @@ echo color("nevy"," ===================================\n");
         }else{
         echo "\n".color("white"," Message: ".$message);
 	gocar:
-        echo "\n".color("pink","CLAIM B.. ");
-        echo "\n".color("white"," Please wait");
+        echo "\n".color("yellow","CLAIM B.. ");
+        echo "\n".color("blue"," Please wait");
         for($a=1;$a<=3;$a++){
         echo color("white",".");
         sleep(5);
@@ -79,8 +79,8 @@ echo color("nevy"," ===================================\n");
         }else{
         echo "\n".color("white"," Message: ".$message);
         gofood:
-        echo "\n".color("nevy","CLAIM C..");
-        echo "\n".color("white"," Please wait");
+        echo "\n".color("yellow","CLAIM C..");
+        echo "\n".color("blue"," Please wait");
         for($a=1;$a<=3;$a++){
         echo color("white",".");
         sleep(5);
