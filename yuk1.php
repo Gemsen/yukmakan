@@ -40,7 +40,7 @@ echo color("nevy"," ===================================\n");
         $otptoken = getStr('"otp_token":"','"',$register);
         echo color("green","+] Kode verifikasi sudah di kirim")."\n";
         otp:
-        echo color("nevy","?] Otp: ");
+        echo color("nevy","?] Otp    : ");
         $otp = trim(fgets(STDIN));
         $data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"83415d06-ec4e-11e6-a41b-6c40088ab51e"}';
         $verif = request("/v5/customers/phone/verify", null, $data1);
@@ -98,7 +98,7 @@ echo color("nevy"," ===================================\n");
         $voucher5 = getStr1('"title":"','",',$cekvoucher,"5");
         $voucher6 = getStr1('"title":"','",',$cekvoucher,"6");
         $voucher7 = getStr1('"title":"','",',$cekvoucher,"7");
-        echo "\n".color("yellow","!] Total voucher ".$total." : ");
+        echo "\n".color("yellow","!] Total vouchers ".$total." : ");
         echo color("blue","1. ".$voucher1);
         echo "\n".color("blue","                     2. ".$voucher2);
         echo "\n".color("blue","                     3. ".$voucher3);
