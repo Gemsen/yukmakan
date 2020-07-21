@@ -50,7 +50,7 @@ echo color("nevy"," ===================================\n");
         $uuid = getStr('"resource_owner_id":',',',$verif);
         echo color("nevy","+] Your access token : ".$token."\n\n");
         save("token.txt",$token);
-        echo color("nevy","\n===========(REDEEM VOUCHER)===========");
+        echo color("nevy","\n===========(KLAIM VC GOFOOD)===========");
         echo "\n".color("nevy","!] GOFOOD");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
