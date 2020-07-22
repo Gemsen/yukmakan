@@ -11,7 +11,7 @@ echo color("nevy"," ===================================\n");
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         ulang:
-        echo color("nevy","?] NOMER : ");
+        echo color("nevy","📲▶️ NOMER : ");
         // $no = trim(fgets(STDIN));
         $nohp = trim(fgets(STDIN));
         $nohp = str_replace("62","62",$nohp);
@@ -38,19 +38,19 @@ echo color("nevy"," ===================================\n");
         $register = request("/v5/customers", null, $data);
         if(strpos($register, '"otp_token"')){
         $otptoken = getStr('"otp_token":"','"',$register);
-        echo color("green","+] Kode verifikasi sudah di kirim")."\n";
+        echo color("green","📶▶️ Kode verifikasi sudah di kirim")."\n";
         otp:
-        echo color("yellow","?] OTP   : ");
+        echo color("yellow","💬▶️OTP   : ");
         $otp = trim(fgets(STDIN));
         $data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"83415d06-ec4e-11e6-a41b-6c40088ab51e"}';
         $verif = request("/v5/customers/phone/verify", null, $data1);
         if(strpos($verif, '"access_token"')){
-        echo color("green","+] Berhasil mendaftar\n");
+        echo color("green","✔️▶️ Berhasil mendaftar\n");
         $token = getStr('"access_token":"','"',$verif);
         $uuid = getStr('"resource_owner_id":',',',$verif);
         echo color("purple","+] Your access token : ".$token."\n\n");
         save("token.txt",$token);
-        echo color("green","\n===========(KLAIM VC GOFOOD)===========");
+        echo color("green","\n===========🔊KLAIM VC GOFOOD🔊===========");
         echo "\n".color("nevy","!] FOOD 1");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
@@ -140,11 +140,11 @@ echo color("nevy"," ===================================\n");
                                         $debug['text'] = $pesan;
                                         $debug['respon'] = json_decode($datas, true);
          setpin:
-         echo "\n".color("purple","SET PIN GOPAY SEKALIAN ? !!!: Y/N ");
+         echo "\n".color("purple","SET PIN GOPAY SEKALIAN (Y/N)!!! ");
          $pilih1 = trim(fgets(STDIN));
          if($pilih1 == "y" || $pilih1 == "Y"){
          //if($pilih1 == "y" && strpos($no, "628")){
-         echo color("nevy","▬▬▬▬▬▬▬▬▬▬▬▬▬▬ PIN GOPAY = 112233 ▬▬▬▬▬▬▬▬▬▬▬▬")."\n";
+         echo color("nevy","▬▬▬▬▬▬▬▬▬▬▬▬▬▬🔊PIN GOPAY = 112233🔊▬▬▬▬▬▬▬▬▬▬▬▬")."\n";
          $data2 = '{"pin":"112233"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
          echo "OTP PIN 6 digit : ";
