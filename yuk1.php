@@ -2,8 +2,8 @@
 date_default_timezone_set('Asia/Jakarta');
 include "function1.php";
 echo color("nevy"," ===================================\n");
-echo color("yellow"," Klaim Voucher 20+10\n");
-echo color("green"," GEMSEN SCRIPT GOFOOD\n");
+echo color("yellow"," GEMSEN SCRIPT GOFOOD\n");
+echo color("green"," Klaim Voucher 20+10\n");
 echo color("blue"," Time    : ".date('[d-m-Y] [H:i:s]')."	\n");
 echo color("nevy"," ===================================\n");
 
@@ -51,7 +51,7 @@ echo color("nevy"," ===================================\n");
         echo color("purple","+] Your access token : ".$token."\n\n");
         save("token.txt",$token);
         echo color("green","\n===========🔊KLAIM VC GOFOOD🔊===========");
-        echo "\n".color("nevy","!] FOOD 1");
+        echo "\n".color("nevy","!] Tikor BANDUNG ");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
@@ -65,7 +65,7 @@ echo color("nevy"," ===================================\n");
         }else{
         echo "\n".color("red","+] Message: ".$message);
 	gocar:
-        echo "\n".color("nevy","!] FOOD 2 ");
+        echo "\n".color("nevy","!] Tikor DENPASAR ");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
@@ -79,7 +79,7 @@ echo color("nevy"," ===================================\n");
         }else{
         echo "\n".color("red","+] Message: ".$message);
         gofood:
-        echo "\n".color("nevy","!] FOOD 3");
+        echo "\n".color("nevy","!] Tikor YOGYA ");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
