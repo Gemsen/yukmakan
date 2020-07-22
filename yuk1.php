@@ -11,7 +11,7 @@ echo color("nevy"," ===================================\n");
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         ulang:
-        echo color("nevy","?] Nomor : ");
+        echo color("nevy","?] NOMER : ");
         // $no = trim(fgets(STDIN));
         $nohp = trim(fgets(STDIN));
         $nohp = str_replace("62","62",$nohp);
@@ -40,7 +40,7 @@ echo color("nevy"," ===================================\n");
         $otptoken = getStr('"otp_token":"','"',$register);
         echo color("green","+] Kode verifikasi sudah di kirim")."\n";
         otp:
-        echo color("nevy","?] OTP   : ");
+        echo color("yellow","?] OTP   : ");
         $otp = trim(fgets(STDIN));
         $data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"83415d06-ec4e-11e6-a41b-6c40088ab51e"}';
         $verif = request("/v5/customers/phone/verify", null, $data1);
@@ -48,9 +48,9 @@ echo color("nevy"," ===================================\n");
         echo color("green","+] Berhasil mendaftar\n");
         $token = getStr('"access_token":"','"',$verif);
         $uuid = getStr('"resource_owner_id":',',',$verif);
-        echo color("pink","+] Your access token : ".$token."\n\n");
+        echo color("purple","+] Your access token : ".$token."\n\n");
         save("token.txt",$token);
-        echo color("pink","\n===========(KLAIM VC GOFOOD)===========");
+        echo color("green","\n===========(KLAIM VC GOFOOD)===========");
         echo "\n".color("nevy","!] FOOD 1");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
@@ -105,7 +105,7 @@ echo color("nevy"," ===================================\n");
         echo "\n".color("blue","                      4. ".$voucher4);
         echo "\n".color("red","                      5. ".$voucher5);
         echo "\n".color("red","                      6. ".$voucher6);
-        echo "\n".color("red","                     7. ".$voucher7);
+        echo "\n".color("red","                      7. ".$voucher7);
         echo"\n";
         $expired1 = getStr1('"expiry_date":"','"',$cekvoucher,'1');
         $expired2 = getStr1('"expiry_date":"','"',$cekvoucher,'2');
