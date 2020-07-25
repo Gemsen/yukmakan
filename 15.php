@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
-include "function15k.php";
+include "function15.php";
         echo "\n\e[7m\e[31m                 AUTO  REDEEM                  \e[0m\n";
 echo "\e[7m\e[36m\e[1m▶️ Token : \e[0m";
 $token = trim(fgets(STDIN));
