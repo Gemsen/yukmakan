@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set('Asia/denpasar');
-include "function1.php";
+include "function4.php";
 echo "\n\n\n\n";
 echo "\e[7m\e[31m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\e[0m\n";
 echo "\e[7m\e[32m▶️ Date&Time    : ".date('[d-m-Y] [H:i:s]')."       \e[0m\n";
@@ -66,7 +66,7 @@ echo "\e[7m\e[31m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
         echo color("yellow",".");
         sleep(15);
         }
-        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2107"}');
+        $code1 = request3('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2107"}');
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
         echo  "\n".("\e[7m\e[32m▶️ ".$message)."\e[0m";
@@ -79,7 +79,7 @@ echo "\e[7m\e[31m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
         echo color("yellow",".");
         sleep(5);
         }
-        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2107"}');
+        $code1 = request2('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2107"}');
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, 'Promo kamu sudah bisa dipakai.')){
         echo  "\n".("\e[7m\e[32m▶️ ".$message)."\e[0m";
