@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set('Asia/denpasar');
-include "function2.php";
+include "function1.php";
 echo "\n\n\n\n";
 echo "\e[7m\e[31m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\e[0m\n";
 echo "\e[7m\e[32m▶️ Date&Time    : ".date('[d-m-Y] [H:i:s]')."       \e[0m\n";
