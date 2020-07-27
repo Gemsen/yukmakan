@@ -1,5 +1,5 @@
 <?php
-date_default_timezone_set('Asia/denpasar');
+date_default_timezone_set('Asia/Jakarta');
 include "function4.php";
 echo "\n\n\n\n";
 echo "\e[7m\e[31m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\e[0m\n";
