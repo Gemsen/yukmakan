@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
-include "function1.php";
+include "function4.php";
 echo color("nevy"," ===================================\n");
 echo color("yellow"," GEMSEN SCRIPT GOFOOD\n");
 echo color("green"," Klaim Voucher 20+10\n");
