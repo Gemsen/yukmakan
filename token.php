@@ -1,5 +1,5 @@
 <?php
-$secret = 'a0d5913b-101e-49a6-ae78-cb459cab0d41';
+$secret = '41572a8c-9d2b-4a36-8a8e-3907e7be3d04';
 $headers = array();
 $headers[] = 'Content-Type: application/json';
 $headers[] = 'X-AppVersion: 3.48.2';
