@@ -2,7 +2,7 @@
 function request($url, $token = null, $data = null, $pin = null, $otpsetpin = null, $uuid = null){
 //Surabaya
 $header[] = "Host: api.gojekapi.com";
-$header[] = "User-Agent: okhttp/3.10.0";
+$header[] = "User-Agent: okhttp/3.12.1";
 $header[] = "Accept: application/json";
 $header[] = "Accept-Language: id-ID";
 $header[] = "Content-Type: application/json; charset=UTF-8";
@@ -49,7 +49,7 @@ $c = curl_init("https://api.gojekapi.com".$url);
 function request1($url, $token = null, $data = null, $pin = null, $otpsetpin = null, $uuid = null){
 //Jakarta
 $header[] = "Host: api.gojekapi.com";
-$header[] = "User-Agent: okhttp/3.10.0";
+$header[] = "User-Agent: okhttp/3.12.1";
 $header[] = "Accept: application/json";
 $header[] = "Accept-Language: id-ID";
 $header[] = "Content-Type: application/json; charset=UTF-8";
@@ -96,7 +96,7 @@ $c = curl_init("https://api.gojekapi.com".$url);
 function request2($url, $token = null, $data = null, $pin = null, $otpsetpin = null, $uuid = null){
 //Bali
 $header[] = "Host: api.gojekapi.com";
-$header[] = "User-Agent: okhttp/3.10.0";
+$header[] = "User-Agent: okhttp/3.12.1";
 $header[] = "Accept: application/json";
 $header[] = "Accept-Language: id-ID";
 $header[] = "Content-Type: application/json; charset=UTF-8";
@@ -143,7 +143,7 @@ $c = curl_init("https://api.gojekapi.com".$url);
 function request3($url, $token = null, $data = null, $pin = null, $otpsetpin = null, $uuid = null){
 //Semarang
 $header[] = "Host: api.gojekapi.com";
-$header[] = "User-Agent: okhttp/3.10.0";
+$header[] = "User-Agent: okhttp/3.12.1";
 $header[] = "Accept: application/json";
 $header[] = "Accept-Language: id-ID";
 $header[] = "Content-Type: application/json; charset=UTF-8";
@@ -190,7 +190,7 @@ $c = curl_init("https://api.gojekapi.com".$url);
 function request4($url, $token = null, $data = null, $pin = null, $otpsetpin = null, $uuid = null){
 //Bandung
 $header[] = "Host: api.gojekapi.com";
-$header[] = "User-Agent: okhttp/3.10.0";
+$header[] = "User-Agent: okhttp/3.12.1";
 $header[] = "Accept: application/json";
 $header[] = "Accept-Language: id-ID";
 $header[] = "Content-Type: application/json; charset=UTF-8";
@@ -237,7 +237,7 @@ $c = curl_init("https://api.gojekapi.com".$url);
 function request5($url, $token = null, $data = null, $pin = null, $otpsetpin = null, $uuid = null){
 //Malang
 $header[] = "Host: api.gojekapi.com";
-$header[] = "User-Agent: okhttp/3.10.0";
+$header[] = "User-Agent: okhttp/3.12.1";
 $header[] = "Accept: application/json";
 $header[] = "Accept-Language: id-ID";
 $header[] = "Content-Type: application/json; charset=UTF-8";
@@ -284,7 +284,7 @@ $c = curl_init("https://api.gojekapi.com".$url);
 function request6($url, $token = null, $data = null, $pin = null, $otpsetpin = null, $uuid = null){
 //Medan
 $header[] = "Host: api.gojekapi.com";
-$header[] = "User-Agent: okhttp/3.10.0";
+$header[] = "User-Agent: okhttp/3.12.1";
 $header[] = "Accept: application/json";
 $header[] = "Accept-Language: id-ID";
 $header[] = "Content-Type: application/json; charset=UTF-8";
@@ -331,7 +331,7 @@ $c = curl_init("https://api.gojekapi.com".$url);
 function request7($url, $token = null, $data = null, $pin = null, $otpsetpin = null, $uuid = null){
 //Yogya
 $header[] = "Host: api.gojekapi.com";
-$header[] = "User-Agent: okhttp/3.10.0";
+$header[] = "User-Agent: okhttp/3.12.1";
 $header[] = "Accept: application/json";
 $header[] = "Accept-Language: id-ID";
 $header[] = "Content-Type: application/json; charset=UTF-8";
