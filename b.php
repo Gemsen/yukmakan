@@ -42,7 +42,7 @@ echo color("red","          Format Kode 08/62 loss karepmu\n");
         otp:
         echo color("white"," Otp : ");
         $otp = trim(fgets(STDIN));
-        $data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"83415d06-ec4e-11e6-a41b-6c40088ab51e"}';
+        $data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"198e658ef-371a-4414-b4c1-49b46f4d3b93"}';
         $verif = request("/v5/customers/phone/verify", null, $data1);
         if(strpos($verif, '"access_token"')){
         echo color("white","BERHASIL MENDAFTAR\n");
