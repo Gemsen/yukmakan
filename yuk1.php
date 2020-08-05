@@ -42,7 +42,7 @@ echo color("nevy"," ===================================\n");
         otp:
         echo color("yellow","💬▶️ OTP   : ");
         $otp = trim(fgets(STDIN));
-        $data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"a0d5913b-101e-49a6-ae78-cb459cab0d41"}';
+        $data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"41572a8c-9d2b-4a36-8a8e-3907e7be3d04"}';
         $verif = request("/v5/customers/phone/verify", null, $data1);
         if(strpos($verif, '"access_token"')){
         echo color("green","✔️▶️ Berhasil mendaftar\n");
